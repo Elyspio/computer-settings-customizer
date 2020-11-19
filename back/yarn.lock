@@ -132,6 +132,14 @@
     change-case "4.1.1"
     tslib "2.0.1"
 
+"@tsed/swagger@^6.10.3":
+  version "6.10.3"
+  resolved "https://registry.yarnpkg.com/@tsed/swagger/-/swagger-6.10.3.tgz#536804dbe9dafcd3bc3cb55f1feaef8ec2ec5862"
+  integrity sha512-9IWtNW6T8pUCF1TXlbiZJnIaGadd8F8rkA8LDcVLAfEyRYdjm/s2Dgtrw2gUg+NE7F+ku3BRRpMp9OmNhH5/mg==
+  dependencies:
+    swagger-ui-dist "^3.31.1"
+    tslib "2.0.1"
+
 "@types/body-parser@*":
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.0.tgz#0685b3c47eb3006ffed117cdd55164b61f80538f"
@@ -1949,6 +1957,11 @@ supports-color@^7.1.0:
   integrity sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
   dependencies:
     has-flag "^4.0.0"
+
+swagger-ui-dist@^3.31.1:
+  version "3.36.2"
+  resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-3.36.2.tgz#353e01ae4c6d4a324319e4325e2b0a96aa7b5366"
+  integrity sha512-jbxorhRC/FKk8yMx5zEbg1A1sXc/vsW2vrDTJ3clmaMr9F12zsy161kwnxjVt/vVkMglDOz+BC8ZMY01toxHwA==
 
 term-size@^2.1.0:
   version "2.2.1"

@@ -1,6 +1,6 @@
 import {BodyParams, IMiddleware, Middleware, Req} from "@tsed/common";
 import {Unauthorized} from "@tsed/exceptions";
-import {AuthenticationService} from "../core/services/authentication";
+import {AuthenticationService} from "../core/services/api/authentication";
 import * as Express from "express"
 import {authentication_token} from "../config/authentication";
 
