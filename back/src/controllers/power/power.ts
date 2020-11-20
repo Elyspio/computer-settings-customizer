@@ -1,12 +1,14 @@
 import {Controller, Get, PathParams, Post} from "@tsed/common";
-import {ContentType, Returns} from "@tsed/schema"
+import {ContentType, Returns, ArrayOf} from "@tsed/schema"
 import {BadRequest} from "@tsed/exceptions"
 import {Power as PowerService} from "../../core/services/power/power";
+import { Powerplan } from "./models";
 
 @Controller("/power")
 export class Power {
 
     @ContentType("application/json")
+    @Returns(200, Array).Of(Powerplan)
     @Get("/powerplans")
     async listPowerplan() {
         return PowerService.Powerplan.list();

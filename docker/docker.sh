@@ -12,6 +12,6 @@ cd ../front ; yarn build
 cd ../back ; yarn build
 fi
 cp "$DIR/DockerFile" "$DIR/../DockerFile"
-cd "$DIR/.." && docker buildx build --platform linux/arm64,linux/amd64  -f ./DockerFile  -t elyspio/computer-settings-customizer --push .
+cd "$DIR/.." && docker buildx build --platform linux/amd64  -f ./DockerFile  -t elyspio/computer-settings-customizer --push .
 rm "$DIR/../DockerFile"
 cd $origin

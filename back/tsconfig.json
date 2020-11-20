@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"outDir": "./build",
-		"target": "ES2020",
+		"target": "ES6",
 		"lib": ["es2016", "dom", "ESNext"],
 		"typeRoots": ["./node_modules/@types"],
 		"module": "commonjs",

@@ -7,6 +7,8 @@ import "./Test.scss"
 import {TestApi} from "../../api/test";
 import {Api} from "../../api/api";
 import Typography from "@material-ui/core/Typography";
+import {PowerApi} from "../../api/core";
+import { Powerplan } from '../../api/core/models';
 
 const mapStateToProps = (state: RootState) => ({})
 
@@ -19,36 +21,23 @@ type ReduxTypes = ConnectedProps<typeof connector>;
 const Test = (props: ReduxTypes) => {
 
 
-    const [msg, setMsg] = React.useState("");
-    const [msgAdmin, setMsgAdmin] = React.useState("");
+    const [msg, setMsg] = React.useState<Powerplan[]>();
 
     React.useEffect(() => {
 
         const fetchData = async () => {
-            const api = TestApi.instance;
-            setMsg((await api.getContent()).data)
-
-            // admin
-            const admin = await api.getAdminContent();
-            if(!admin) {
-                Api.redirectToLoginPage();
-            }
-            else {
-                setMsgAdmin(admin.data)
-            }
-
-
+            const {data} = (await new PowerApi({basePath: "http://localhost:4000"}).powerListPowerplan());
+            setMsg(data)
         }
         fetchData();
-
 
     }, [])
 
 
     return (
         <Container className={"Text"}>
-            <Typography>msg: {msg}</Typography>
-            <Typography>admin msg: {msgAdmin}</Typography>
+            <Typography>Powerplans: </Typography>
+            {msg?.map(x =>  <p>{x.label}</p>)}
         </Container>
     );
 

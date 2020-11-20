@@ -7,7 +7,6 @@ interface Props {
     appName: string
 }
 
-
 class Appbar extends Component<Props> {
     render() {
 
